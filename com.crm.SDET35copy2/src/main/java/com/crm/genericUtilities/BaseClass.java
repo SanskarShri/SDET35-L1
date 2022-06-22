@@ -7,6 +7,7 @@ package com.crm.genericUtilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -58,8 +59,11 @@ public class BaseClass
 			driver=new ChromeDriver();
 		}else if(BROWSER.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			ChromeOptions chromeOptions=new ChromeOptions();
+			chromeOptions.setBinary("C:\\Users\\SanjayBabu\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+			driver=new ChromeDriver(chromeOptions);
+//			WebDriverManager.chromedriver().setup();
+//			driver=new ChromeDriver();
 		}else {
 			driver=new ChromeDriver();
 		}
