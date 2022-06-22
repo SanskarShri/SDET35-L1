@@ -14,10 +14,11 @@ public class CreateContactsTest extends BaseClass{
 @Test(retryAnalyzer = com.crm.genericUtilities.RetryAnalyserImptn.class)
 	public void createContactTest() throws Throwable{
 		
-		//Hi Hello
+	
 		//To get a random number
 		int randNum = jLib.getRandomNumber();
 		
+		//Hi Hello
 		//Fetch first name from excelSheet
 		String FirstName = eLib.readDataFromExcel("Sheet1", 7, 2)+randNum;
 
