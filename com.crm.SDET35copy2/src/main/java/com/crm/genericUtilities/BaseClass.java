@@ -48,10 +48,10 @@ public class BaseClass
 	@BeforeClass(groups = {"smokeTest","regressionTest"})
 	public void launchTheBrowser() throws Throwable
 	{
-		String BROWSER = System.getProperty("browser");
-		String URL = System.getProperty("url");
-		//String BROWSER = fLib.getPropertKeyValue("browser");
-		//String URL = fLib.getPropertKeyValue("url");
+		//String BROWSER = System.getProperty("browser");
+		//String URL = System.getProperty("url");
+		String BROWSER = fLib.getPropertKeyValue("browser");
+		String URL = fLib.getPropertKeyValue("url");
 		
 		if(BROWSER.equalsIgnoreCase("firfox"))
 		{
@@ -59,11 +59,11 @@ public class BaseClass
 			driver=new ChromeDriver();
 		}else if(BROWSER.equalsIgnoreCase("chrome"))
 		{
-			ChromeOptions chromeOptions=new ChromeOptions();
-			chromeOptions.setBinary("C:\\Users\\SanjayBabu\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
-			driver=new ChromeDriver(chromeOptions);
-//			WebDriverManager.chromedriver().setup();
-//			driver=new ChromeDriver();
+//			ChromeOptions chromeOptions=new ChromeOptions();
+//			chromeOptions.setBinary("C:\\Users\\SanjayBabu\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+//			driver=new ChromeDriver(chromeOptions);
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
 		}else {
 			driver=new ChromeDriver();
 		}
