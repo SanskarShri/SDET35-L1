@@ -17,7 +17,6 @@ public class ToCreateOrganisationTest extends BaseClass{
 @Test(retryAnalyzer = com.crm.genericUtilities.RetryAnalyserImptn.class)
 public void createOrganisationTest() throws Throwable{
 	
-	//Hi
 	//To get random number
 	int randNum = jLib.getRandomNumber();
 	
