@@ -52,14 +52,14 @@ public class BaseClass
 		//String BROWSER = fLib.getPropertKeyValue("browser");
 		//String URL = fLib.getPropertKeyValue("url");
 		
-		if(BROWSER.equalsIgnoreCase("chrome"))
+		if(BROWSER.equalsIgnoreCase("firfox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver=new ChromeDriver();
+		}else if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
-		}else if(BROWSER.equalsIgnoreCase("firefox"))
-		{
-			WebDriverManager.firefoxdriver().setup();
-			driver=new FirefoxDriver();
 		}else {
 			driver=new ChromeDriver();
 		}
