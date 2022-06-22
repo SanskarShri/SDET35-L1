@@ -18,7 +18,6 @@ public class CreateContactsTest extends BaseClass{
 		//To get a random number
 		int randNum = jLib.getRandomNumber();
 		
-		//Hi Hello
 		//Fetch first name from excelSheet
 		String FirstName = eLib.readDataFromExcel("Sheet1", 7, 2)+randNum;
 
